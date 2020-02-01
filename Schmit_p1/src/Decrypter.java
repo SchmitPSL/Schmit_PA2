@@ -1,3 +1,13 @@
+/* To Decrypt:
+ * 		Take the 4 digit number and break into 4 separate numbers
+ * 		Add 3 to each individual number
+ * 		Mod the new number by 10 to get the original value 
+ * 		Swap the first value with the third value
+ * 		Swap the second value with the fourth value
+ * 		Put the 4 values together to create the decrypted 4 digit number
+ * 
+ * 
+ */
 
 public class Decrypter {
 

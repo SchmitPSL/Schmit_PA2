@@ -1,11 +1,13 @@
 //To Encrypt:
-		//Take the number and encrypt it:
-			//Replace each digit with the result of adding 7 and
-			//mod the new value with 10
-			//Then swap the first digit with the third digit
-			//And the second with the fourth digit.
-			//Save the encrypted number
-		//Print the encrypted integer
+//Take the number and encrypt it:
+//Replace each digit with 
+//the result of adding 7 and
+//mod the new value with 10
+//Then swap the first digit with the third digit
+//And the second with the fourth digit.
+//Save the encrypted number
+//Print the encrypted integer
+
 public class Encrypter {
 
 	public String encrypt(int numberInt) {
