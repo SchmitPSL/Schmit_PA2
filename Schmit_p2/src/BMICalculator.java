@@ -1,3 +1,4 @@
+
 /*
  * BMI Calculator:
  * Choose which formula to choose from
@@ -83,6 +84,7 @@ public class BMICalculator {
 		System.out.print("Enter height in inches: ");
 		setHeight(s.nextDouble());
 	}
+
 //calculateBmi chooses between which method the user chose and calculates the BMI according to the specified method
 	public void calculateBmi() {
 		switch (bCase) {
@@ -95,9 +97,12 @@ public class BMICalculator {
 		default:
 			break;
 		}
+
+		calculateBmiCategory();
 	}
+
 //calculateBmiCategory determines what the category is for the calculated BMI value
-	private String calculateBmiCategory() {
+	private void calculateBmiCategory() {
 		if (this.BMI >= 30) {
 			this.BMICategory = "Obesity = BMI of 30 or greater";
 		} else if (this.BMI >= 25) {
@@ -107,24 +112,23 @@ public class BMICalculator {
 		} else {
 			this.BMICategory = "Underweight = <18.5";
 		}
-		return BMICategory;
 
 	}
+
 //displayBmi prints out the Bmi value and the Bmi category associated with the Bmi score
 //prints all Bmi categories for user to compare
 	public void displayBmi() {
-		System.out.printf("Your BMI is %.1f\n", getBmi());
+		System.out.printf("\nYour BMI is %.1f\n", getBmi());
 		System.out.println("Your BMI category is " + getBmiCategory());
-		System.out.println("BMI Categories:\r\n" + 
-				"Underweight = <18.5\r\n" + 
-				"Normal weight = 18.5–24.9\r\n" + 
-				"Overweight = 25–29.9\r\n" + 
-				"Obesity = BMI of 30 or greater");
+		System.out.println("\nBMI Categories:\r\n" + "Underweight = <18.5\r\n" + "Normal weight = 18.5–24.9\r\n"
+				+ "Overweight = 25–29.9\r\n" + "Obesity = BMI of 30 or greater");
 	}
+
 //getWeight gets the weight of the user
 	public double getWeight() {
 		return this.weight;
 	}
+
 //setWeight sets the weight of the user only if the value is valid, if not, exits
 	private void setWeight(Double weight) {
 		if (weight > 0) {
@@ -134,10 +138,12 @@ public class BMICalculator {
 			System.exit(0);
 		}
 	}
+
 //getHeight gets the height of the user
 	public double getHeight() {
 		return this.height;
 	}
+
 //setHeight sets the height of the user only if the value is valid, if not, exits
 	private void setHeight(Double height) {
 		if (height > 0) {
@@ -147,13 +153,15 @@ public class BMICalculator {
 			System.exit(0);
 		}
 	}
+
 //getBmi gets the Bmi of the user
 	public double getBmi() {
 		return this.BMI;
 	}
+
 //getBmiCategory gets the calculated Bmi category of the user
 	public String getBmiCategory() {
-		return calculateBmiCategory();
+		return this.BMICategory;
 	}
 
 }
